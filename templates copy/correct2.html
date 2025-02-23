@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Correct Answer - The Silent Truth{% endblock %}
+{% block content %}
+  <h1>Correct!</h1>
+  <p>You correctly identified that the unsafe working conditions violate workers' rights, which are protected under Article 23 of the Universal Declaration of Human Rights.</p>
+  <p>Remember the clue you overheard about "bus line 73"? It might indicate your next destination.</p>
+  <p><a href="{{ url_for('bus_question') }}" class="button">Decide where to go next</a></p>
+{% endblock %}

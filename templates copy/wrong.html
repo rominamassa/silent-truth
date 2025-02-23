@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Incorrect Answer - The Silent Truth{% endblock %}
+{% block content %}
+  <h1>That might not be the right area to focus on.</h1>
+  <p>Review the note again carefully.</p>
+  <p><a href="{{ url_for('question') }}" class="button">Try Again</a></p>
+{% endblock %}

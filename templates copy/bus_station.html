@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Bus Station Encounter - The Silent Truth{% endblock %}
+{% block content %}
+  <h1>Bus Station Encounter</h1>
+  <p>At the bustling bus station, you notice a flurry of activity. Amid the noise, you catch a conversation between the station attendant, Maria, and a visibly upset commuter.</p>
+  <p>Maria explains, "I just saw a man being refused boarding on bus line 73 because he didn't 'fit in'—despite having a valid ticket. It was as if his appearance marked him as an outsider."</p>
+  <p>This incident, more than just poor service, hints at a violation of a fundamental human right.</p>
+  <p><a href="{{ url_for('bus_hr_question') }}" class="button">Investigate this violation</a></p>
+{% endblock %}

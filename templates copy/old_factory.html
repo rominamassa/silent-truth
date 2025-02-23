@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Old Factory District - The Silent Truth{% endblock %}
+{% block content %}
+  <h1>Old Factory District</h1>
+  <p>You leave the previous scene and make your way to the old factory district—the location mentioned in the note.</p>
+  <p>In the shadow of abandoned industrial buildings, you notice workers enduring long hours in hazardous conditions with little regard for their safety.</p>
+  <p>As you observe, you overhear someone mention <strong>"bus line 73"</strong>—a clue that might help you decide your next move.</p>
+  <p><a href="{{ url_for('question2') }}" class="button">Investigate the working conditions</a></p>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Investigation Question: Human Right Violation - The Silent Truth{% endblock %}
+{% block content %}
+  <h1>Investigation Question</h1>
+  <p>Observing the hazardous conditions, you suspect that the workers' rights are being violated.</p>
+  <p>Which human right is being compromised—and under which article of the Universal Declaration of Human Rights is it protected?</p>
+  <form method="POST">
+    <input type="radio" name="answer" value="1" id="option1" required>
+    <label for="option1">Article 3: Right to Life, Liberty, and Personal Security</label><br>
+    <input type="radio" name="answer" value="2" id="option2">
+    <label for="option2">Article 23: Right to Work, to Free Choice of Employment, and to Just and Favorable Conditions of Work</label><br>
+    <input type="radio" name="answer" value="3" id="option3">
+    <label for="option3">Article 19: Right to Freedom of Opinion and Expression</label><br>
+    <input type="radio" name="answer" value="4" id="option4">
+    <label for="option4">Article 5: Right to Protection Against Torture</label><br>
+    <input type="submit" value="Submit Answer" class="button">
+  </form>
+{% endblock %}
