@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Identify the Protest's Focus - The Silent Truth{% endblock %}
+{% block content %}
+  <h1>Which Human Right is at Stake?</h1>
+  <p>The protest outside the civic center is a call against discrimination—a powerful exercise of the right to express dissent. Which human right is being defended by these protestors?</p>
+  <form method="POST">
+    <input type="radio" name="answer" value="1" id="option1" required>
+    <label for="option1">Article 19: Right to Freedom of Expression</label><br>
+    <input type="radio" name="answer" value="2" id="option2">
+    <label for="option2">Article 23: Right to Work and Favorable Conditions</label><br>
+    <input type="radio" name="answer" value="3" id="option3">
+    <label for="option3">Article 13: Right to Freedom of Movement</label><br>
+    <input type="radio" name="answer" value="4" id="option4">
+    <label for="option4">Article 3: Right to Life, Liberty, and Security</label><br>
+    <input type="submit" value="Submit Answer" class="button">
+  </form>
+{% endblock %}

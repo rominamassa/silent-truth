@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Correct Answer - The Silent Truth{% endblock %}
+{% block content %}
+  <h1>Correct!</h1>
+  <p>You correctly identified the violation at the bus station.</p>
+  <p>Leaving the station, you notice a quaint newspaper stand selling coffee. You decide to grab a cup and take a moment to reflect.</p>
+  <p>As you sip your coffee, a headline on the stand catches your eye: "<strong>Protest Against Discrimination at the Civic Center Today</strong>." The article notes that the protest is being held at a civic center just a short walk away.</p>
+  <p>Inspired by what you've witnessed, you decide to follow this new lead.</p>
+  <p><a href="{{ url_for('civic_center') }}" class="button">Proceed to the Civic Center</a></p>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Incorrect Answer - The Silent Truth{% endblock %}
+{% block content %}
+  <h1>That's not correct.</h1>
+  <p>Remember, the protest is a peaceful exercise of the right to express dissent. The ability to voice opposition against discrimination is protected under Article 19—the right to freedom of expression.</p>
+  <p><a href="{{ url_for('civic_center_question') }}" class="button">Try Again</a></p>
+{% endblock %}

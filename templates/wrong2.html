@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Incorrect Answer - The Silent Truth{% endblock %}
+{% block content %}
+  <h1>That's not the correct answer.</h1>
+  <p>Review the evidence: workers endure long hours in hazardous conditions with inadequate safety measures. This violates their right to work under just and favorable conditions.</p>
+  <p>Which article of the Universal Declaration of Human Rights protects this right?</p>
+  <p><a href="{{ url_for('question2') }}" class="button">Try Again</a></p>
+{% endblock %}
