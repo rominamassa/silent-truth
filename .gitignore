@@ -1,1 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# macOS system files
 .DS_Store
+
+# Log files
+*.log
+
+# Optional: Directories containing large files you don't need in production
+data/
+models/
