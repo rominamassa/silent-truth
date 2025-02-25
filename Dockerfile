@@ -6,8 +6,8 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copy the rest of your code
+# Copy the rest of the application code
 COPY . .
 
-# Run your app with Gunicorn
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:$PORT"]
+# Use the shell form so that $PORT is substituted
+CMD gunicorn app:app --bind 0.0.0.0:$PORT
