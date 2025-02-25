@@ -98,4 +98,74 @@ def bus_correct():
 def bus_wrong():
     return render_template("bus_wrong.html")
 
-# --- Routes for the Bus Station Encounter and Human Right Min
+# --- Routes for the Bus Station Encounter and Human Right Mini-Case ---
+
+@app.route("/bus_station")
+def bus_station():
+    """
+    At the bus station, the detective meets a character who recounts an incident.
+    A bus station attendant (Maria) explains that a commuter was recently refused
+    boarding because of his appearance, despite having a valid ticket.
+    """
+    return render_template("bus_station.html")
+
+@app.route("/bus_hr_question", methods=["GET", "POST"])
+def bus_hr_question():
+    """
+    This route presents a question asking which human right is being violated
+    by the incident described at the bus station.
+    """
+    if request.method == "POST":
+        answer = request.form.get("answer")
+        # Correct answer is assumed to be "1" (Article 13: Right to Freedom of Movement)
+        if answer == "1":
+            return redirect(url_for("bus_hr_correct"))
+        else:
+            return redirect(url_for("bus_hr_wrong"))
+    return render_template("bus_hr_question.html")
+
+@app.route("/bus_hr_correct")
+def bus_hr_correct():
+    """
+    Feedback for correctly identifying the human right violation.
+    """
+    return render_template("bus_hr_correct.html")
+
+@app.route("/bus_hr_wrong")
+def bus_hr_wrong():
+    """
+    Feedback for an incorrect answer, prompting the player to try again.
+    """
+    return render_template("bus_hr_wrong.html")
+
+# --- Routes for the Civic Center Encounter and Final Mini-Case ---
+
+@app.route("/civic_center")
+def civic_center():
+    return render_template("civic_center.html")
+
+@app.route("/civic_center_question", methods=["GET", "POST"])
+def civic_center_question():
+    """
+    Presents the final mini-case question at the civic center.
+    The protest is a demonstration of the right to freedom of expression (Article 19).
+    """
+    if request.method == "POST":
+        answer = request.form.get("answer")
+        if answer == "1":  # Correct answer: Article 19
+            return redirect(url_for("civic_center_correct"))
+        else:
+            return redirect(url_for("civic_center_wrong"))
+    return render_template("civic_center_question.html")
+
+@app.route("/civic_center_correct")
+def civic_center_correct():
+    return render_template("civic_center_correct.html")
+
+@app.route("/civic_center_wrong")
+def civic_center_wrong():
+    return render_template("civic_center_wrong.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
